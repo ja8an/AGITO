@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Steve_Hair_TextureA
+  m_Shader: {fileID: 4800000, guid: f342d70582ab2474baeadf4e9435e793, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: f24af3e1661742f41b73be3dbc76b923, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SecondTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 540a966146edb6640bb294f18f61f45b, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Cutoff
+        second: .519999981
+      data:
+        first:
+          name: _SpecularMultiplier
+        second: 1.38999999
+      data:
+        first:
+          name: _AnisoOffset
+        second: 0
+      data:
+        first:
+          name: _Gloss
+        second: 128
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: .91911763, g: .689432085, b: .398734838, a: 1}
+      data:
+        first:
+          name: _SpecularColor
+        second: {r: 1, g: .982251525, b: .742647052, a: 1}
+      data:
+        first:
+          name: _ColorSecondary
+        second: {r: .882352948, g: .788390934, b: .395761251, a: 1}
+      data:
+        first:
+          name: _ColorRoots
+        second: {r: .889705896, g: .702023208, b: .464478821, a: 1}
+      data:
+        first:
+          name: _ColorTips
+        second: {r: .970588207, g: .939088404, b: .685121059, a: 1}
+      data:
+        first:
+          name: _ColorPunk
+        second: {r: 0, g: 1, b: .172413826, a: 1}

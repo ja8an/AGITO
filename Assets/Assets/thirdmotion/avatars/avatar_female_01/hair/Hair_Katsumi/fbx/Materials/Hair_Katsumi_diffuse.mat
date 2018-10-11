@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hair_Katsumi_diffuse
+  m_Shader: {fileID: 4800000, guid: f342d70582ab2474baeadf4e9435e793, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: b9163b8c0515e4d3080f8ca8aa819835, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SecondTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 73a8a062087d94be1a4f45819247e3fc, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Cutoff
+        second: .899999976
+      data:
+        first:
+          name: _SpecularMultiplier
+        second: 2.4000001
+      data:
+        first:
+          name: _AnisoOffset
+        second: -.107142858
+      data:
+        first:
+          name: _Gloss
+        second: 32
+      data:
+        first:
+          name: _PrimaryShift
+        second: .5
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: .789046764, b: .522058845, a: 1}
+      data:
+        first:
+          name: _SpecularColor
+        second: {r: 1, g: .972109556, b: .816176474, a: 1}
+      data:
+        first:
+          name: _ColorSecondary
+        second: {r: .970588207, g: .898040414, b: .492430776, a: 1}
+      data:
+        first:
+          name: _ColorRoots
+        second: {r: .867647052, g: .671153665, b: .376405716, a: 1}
+      data:
+        first:
+          name: _ColorTips
+        second: {r: 1, g: .871703863, b: .595588207, a: 1}
+      data:
+        first:
+          name: _ColorPunk
+        second: {r: 0, g: 1, b: .0896549225, a: 1}

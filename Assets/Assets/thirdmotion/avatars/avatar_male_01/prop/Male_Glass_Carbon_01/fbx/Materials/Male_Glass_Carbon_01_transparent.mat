@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Male_Glass_Carbon_01_transparent
+  m_Shader: {fileID: 4800000, guid: 76e8216a258821d4eac9cbc07ade247c, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: f136f49b9e0213843bc7e41992776469, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Cube
+        second:
+          m_Texture: {fileID: 8900000, guid: 1f8ef407864bb0b41a51f1d19597d447, type: 2}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Mask
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Cutoff
+        second: .339285702
+      data:
+        first:
+          name: _Shininess
+        second: .172048986
+      data:
+        first:
+          name: _SpecularMultiplier
+        second: .819999993
+      data:
+        first:
+          name: _SpecularGloss
+        second: 2
+      data:
+        first:
+          name: _ReflectMultiplier
+        second: -3.41000009
+      data:
+        first:
+          name: _Focus
+        second: -10.7142859
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: .705886245, g: .332186103, b: .332186103, a: 1}
+      data:
+        first:
+          name: _SpecularColor
+        second: {r: .611764729, g: .611764729, b: .611764729, a: .611764729}
+      data:
+        first:
+          name: _ReflectColor
+        second: {r: .611764729, g: .611764729, b: .611764729, a: .501960814}
+      data:
+        first:
+          name: _Specular
+        second: {r: 0, g: 0, b: 0, a: 0}

@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: lambert1
+  m_Shader: {fileID: 4800000, guid: f342d70582ab2474baeadf4e9435e793, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 1500221a75f730f47a4a5f579850c364, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SecondTex
+        second:
+          m_Texture: {fileID: 2800000, guid: c4fc71df0ffa842418dc5c5f88a3125f, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Cutoff
+        second: .899999976
+      data:
+        first:
+          name: _SpecularMultiplier
+        second: 1.25
+      data:
+        first:
+          name: _AnisoOffset
+        second: -.25
+      data:
+        first:
+          name: _Gloss
+        second: 64
+      data:
+        first:
+          name: _PrimaryShift
+        second: 0
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: .470588207, g: .370934218, b: .221453264, a: 1}
+      data:
+        first:
+          name: _SpecularColor
+        second: {r: .941176474, g: .834268272, b: .698961914, a: 1}
+      data:
+        first:
+          name: _ColorSecondary
+        second: {r: .669117689, g: .47435531, b: .265679091, a: 1}
+      data:
+        first:
+          name: _ColorRoots
+        second: {r: .404411793, g: .305503249, b: .246810138, a: 1}
+      data:
+        first:
+          name: _ColorTips
+        second: {r: .632352948, g: .477695823, b: .38592127, a: 1}
+      data:
+        first:
+          name: _ColorPunk
+        second: {r: 0, g: 1, b: .420689583, a: 1}
