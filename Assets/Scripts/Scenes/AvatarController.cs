@@ -101,20 +101,9 @@ namespace Assets.Scripts
 
             if (transform.position != targets[current_target].position)
             {
-                Debug.Log("Moving to " + current_target);
                 Vector3 pos = Vector3.MoveTowards(transform.position, targets[current_target].position, speed);
+                transform.LookAt(pos);
                 GetComponent<Rigidbody>().MovePosition(pos);
-
-
-
-                if (pos != Vector3.zero)
-                {
-                    transform.rotation = Quaternion.Slerp(
-                        transform.rotation,
-                        Quaternion.LookRotation(pos),
-                        Time.deltaTime * 100f
-                    );
-                }
 
                 if (animIndex != 13)
                 {
@@ -126,16 +115,12 @@ namespace Assets.Scripts
 
                 Vector3 cam_pos = GameObject.Find("main_camera").gameObject.transform.position;
                 cam_pos.y = 0f;
-                transform.rotation = Quaternion.Slerp(
-                        transform.rotation,
-                        Quaternion.LookRotation(cam_pos),
-                        Time.deltaTime * 100f
-                    );
-                // current_target = (current_target + 1) % targets.Length;
+                transform.LookAt(cam_pos);
                 if (animIndex != 0)
                 {
                     playAnimation(0);
                 }
+                CanvasController.UpdateCanvas(current_target);
             }
         }
 

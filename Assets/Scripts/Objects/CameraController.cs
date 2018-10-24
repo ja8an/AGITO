@@ -76,17 +76,17 @@ public class CameraController : MonoBehaviour
 
     public void BedroomCamera()
     {
-        AvatarController.SetTarget(0);
+        CanvasController.UpdateCanvas(0);
     }
 
     public void KitchenCamera()
     {
-        AvatarController.SetTarget(1);
+        CanvasController.UpdateCanvas(1);
     }
 
     public void OfficeCamera()
     {
-        AvatarController.SetTarget(3);
+        CanvasController.UpdateCanvas(2);
     }
 
     public void ChangeTo(int cam)

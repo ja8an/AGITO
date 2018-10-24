@@ -21,43 +21,47 @@ namespace Assets.Scripts
         public Button settings_button;
         public Button dialogue_cancel_button;
 
+        public Canvas settings_canvas;
+
         [Header("UI Controller")]
         public GameObject[] CanvasGroup;
+        public GameObject actions_canvas;
 
         // Chat canvas
         [Header("Dialogue Canvas")]
         // [Tooltip("Canvas helper")]
-        public  GameObject dialogueCanvas;
-        public  Button dialogueBox;
-        public  Text dialogueText;
+        public GameObject dialogueCanvas;
+        public Button dialogueBox;
+        public Text dialogueText;
 
         [Header("Time Canvas")]
-        public  GameObject timeCanvas;
-        public  Dropdown hour;
-        public  Dropdown minutes;
-        public  Toggle[] daysOfWeek;
-        public  Button timeButton;
+        public GameObject timeCanvas;
+        public Dropdown hour;
+        public Dropdown minutes;
+        public Toggle[] daysOfWeek;
+        public Button timeButton;
 
         // Gallery
         [Header("Gallery Picker")]
-        public  Canvas galleryCanvas;
-        public  GameObject galleryContainer;
-        public  Button galleryItem;
-        public  Text galleryTitle;
-        public  Image galleryImage;
+        public Canvas galleryCanvas;
+        public GameObject galleryContainer;
+        public Button galleryItem;
+        public Text galleryTitle;
+        public Image galleryImage;
 
-        private  User userData;
+        private User userData;
+
+        [Header("Actions")]
+        public GameObject[] actions;
 
         // Text
         [Header("Input Canvas")]
-        public  Canvas textCanvas;
-        public  InputField textInput;
-        public  Button textButton;
+        public Canvas textCanvas;
+        public InputField textInput;
+        public Button textButton;
 
-        private  ArrayList fila;
-        private  TextToSpeech tts;
-
-        public CanvasController canvas_controller;
+        private ArrayList fila;
+        private TextToSpeech tts;
 
         public static CanvasController _gameObject;
 
@@ -83,7 +87,6 @@ namespace Assets.Scripts
             // Inicia a fila do dialogo
             fila = new ArrayList();
 
-            canvas_controller = this;
             _gameObject = this;
 
             foreach (Text t in GetComponents<Text>())
@@ -153,6 +156,30 @@ namespace Assets.Scripts
 
         }
 
+        public static void UpdateCanvas(int target)
+        {
+            AvatarController.avatar.current_target = target;
+            _gameObject.HideActions(target);
+
+        }
+
+        public void ToggleSettings()
+        {
+            settings_canvas.gameObject.SetActive(!settings_canvas.gameObject.activeInHierarchy);
+        }
+
+        public void HideActions(int a = -1)
+        {
+            foreach (GameObject action in actions)
+            {
+                action.gameObject.SetActive(false);
+            }
+            if (a != -1)
+            {
+                actions[a].gameObject.SetActive(true);
+            }
+        }
+
         // Update is called once per frame
         void Update()
         {
@@ -161,8 +188,8 @@ namespace Assets.Scripts
 
             if (dialogueText != null && dialogueText.text != null && dialogueText.text.Length > 0)
             {
-
                 ShowText();
+                actions_canvas.gameObject.SetActive(false);
             }
             else
             {
@@ -170,10 +197,12 @@ namespace Assets.Scripts
                 {
 
                     ViewNext();
+                    actions_canvas.gameObject.SetActive(false);
                 }
                 else
                 {
                     HideText();
+                    actions_canvas.gameObject.SetActive(true);
                 }
             }
 
@@ -336,7 +365,7 @@ namespace Assets.Scripts
 
         }
 
-        private  void GetGallery(string message, List<Gallery> options, Action<Gallery> action, bool shuffle = false)
+        private void GetGallery(string message, List<Gallery> options, Action<Gallery> action, bool shuffle = false)
         {
 
             if (shuffle)
@@ -403,7 +432,7 @@ namespace Assets.Scripts
             }
         }
 
-        public  void selectFood(Action<Gallery> callback = null)
+        public void selectFood(Action<Gallery> callback = null)
         {
             int sysHour = DateTime.Now.Hour;
 
