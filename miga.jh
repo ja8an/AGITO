@@ -1,0 +1,77 @@
+entity Institution {
+	name String required
+    slug String required
+    shortDescription String
+    description String
+	streetAddress String required
+	postalCode String required
+	city String required
+	stateProvince String required
+}
+
+entity Course {
+	name String required
+    shortDescription String required
+    description String required
+    price Float required
+}
+
+entity Lesson {
+	title String required
+    shortDescription String required
+    content String required
+}
+
+relationship OneToMany {
+	Course{lesson} to Lesson
+    Department{ability} to Ability
+    Institution{vacancies} to Job{institution}
+}
+
+relationship ManyToOne {
+    Job{profession} to Profession{job}
+    Institution{branch} to Institution{root}
+}
+
+relationship ManyToMany {
+	Course{ability} to Ability{course}
+	Ability{user} to User{ability}
+    Job{candidate} to User{application}
+    Institution{employee} to User{experience}
+    Course{enrollment} to User{enrollment}
+    Course{creator} to User{course}
+    Institution{job} to User{job}
+    Job{ability} to Ability{job}
+    Institution{education} to User{education}
+}
+
+entity Ability {
+	name String required
+    description String required
+}
+
+entity Profession {
+	name String required
+    description String required
+}
+
+entity Department {
+	departmentName String required
+}
+
+entity Job {
+	description String
+}
+
+// Set pagination options
+paginate Job, Profession with infinite-scroll
+paginate Job with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl except Employee, Job
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
